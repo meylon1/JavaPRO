@@ -13,7 +13,7 @@ public class Lottery {
 		
 		//get the winning number and tickets sets
 		
-		Set<Integer> winningNumbers = createWinningNumbers();
+	    Set<Integer> winningNumbers = createWinningNumbers();
 	    Set<Integer> ticket = getTicket();
 	    Set<Integer> intersection = new TreeSet<Integer>(ticket);
 	    intersection.retainAll(winningNumbers);
@@ -54,7 +54,7 @@ public class Lottery {
 	public static Set<Integer> getTicket(){
 		Set<Integer> ticket = new TreeSet<Integer>();
 		Scanner console = new Scanner(System.in);
-		System.out.print("type your " + NUMBERS + " unique lotto numbers:");
+		System.out.print("Enter your " + NUMBERS + " unique lotto numbers:");
 		while (ticket.size()< NUMBERS) {
 			int number = console.nextInt();
 			ticket.add(number);
